@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h2>O detetive Roy!</h2>
+
+<p>O detetive Roy, investigando os arquivos de um hacker, encontrou o seguinte programa: <br><br>
+
+Sabemos que o código calcula a média de três números. Mas o que eles significam?
+<br><br>
+Dias depois, o hacker, que era na verdade um hacker do bem, virou amigo de Roy e durante uma conversa o assunto do código veio à tona. Curioso, Roy perguntou ao hacker o que aqueles números significavam e o hacker disse: ah, o programa calcula a média das idades das minhas filhas. Linda tem 12 anos, Guaraciara tem 15 e Pérola tem 13! Roy ficou decepcionado com a resposta, pois achou que era algo mais complicado.
+<br><br>
+Se você pudesse voltar no tempo e reescrever o programa para que o próprio detetive Roy conseguisse entender o programa, como você o escreveria? (DICA: faça uso de variáveis para deixar seu código mais claro).</p>
+<br>
+<b>Código como foi apresentado no exercício</b>
+<br>
+
+	<script>
+    	document.write( (12 + 15 + 13) / 3);
+	</script>
+
+<br><br>
+<b>Código refeito usando as variáveis e arredondamento</b>
+<p>Mesmo usando letras maiúsculas para definir uma variável o código vai funcionar - mas, melhor usar como padrão, sempre letras minúsculas</p>
+<br>
+
+	<script>
+		var IDADELINDA = 12;
+		var idadeGuaraciaba = 15;
+		var idadePerola = 13;
+		var media = (IDADELINDA + idadeGuaraciaba + idadePerola)/3;
+		var totalIdades = IDADELINDA + idadeGuaraciaba + idadePerola;
+
+		document.write("A média de idade das filhas do hacker é: " + Math.round(media) + "<br>");
+
+		document.write("<br> <b> Código escrito de forma mais simples </b> <br>");
+
+		document.write((IDADELINDA + idadeGuaraciaba + idadePerola)/3 + "<br>");
+
+		document.write("<br><b> Usando a variável totalIdades com Math.round </b> <br>")
+
+			document.write(+ Math.round(totalIdades / 3));
+
+	</script>

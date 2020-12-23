@@ -1,0 +1,47 @@
+<canvas width= "600" height= "400"></canvas>
+
+<script>
+// quando se desenha não precisa usar o meta charset
+		
+	function desenhaQuadrado(x, y, cor) {
+
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	pincel.fillStyle = cor;
+	pincel.fillRect(x, y, 50, 50);
+	pincel.fillStroke ='black';
+	pincel.strokeRect(x, y, 50, 50);
+
+	}
+
+	desenhaQuadrado(0, 0, 'blue');
+	desenhaQuadrado(50, 0, 'red');
+	desenhaQuadrado(100, 0, 'yellow' );
+
+	desenhaQuadrado(0, 50, 'yellow');
+	desenhaQuadrado(0, 100, 'red');
+	desenhaQuadrado(0, 150, 'blue');
+
+	//repetir o código até preencher a tela com quadrados
+
+	/*
+	var x = 0;
+	while(x < 600) {
+
+		desenhaQuadrado(x, 250, 'green');
+		desenhaQuadrado(x, 300, 'red');
+		desenhaQuadrado(x, 350, 'blue');
+		x = x + 50; //vai incrementando até estourar a condição do while
+	}
+	*/
+
+	for(var x = 0; x < 600; x = x +50) {
+
+		desenhaQuadrado(x, 250, 'green');
+		desenhaQuadrado(x, 300, 'red');
+		desenhaQuadrado(x, 350, 'blue');
+
+	}
+
+</script>

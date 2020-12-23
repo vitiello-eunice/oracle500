@@ -1,0 +1,236 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	function calculaImc(peso, altura) {
+
+		var imc = peso / (altura * altura);
+		mostra("o imc calculado é " + imc);
+	}
+
+	
+	calculaImc(58, 1.55);
+	calculaImc(82, 1.75);
+	calculaImc(53, 1.53);
+
+
+	</script>
+
+
+<script>
+
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	function calculaImc(peso, altura) {
+
+		var imc = peso / (altura * altura);
+		return imc;
+		
+		}
+
+	var imcEunice = calculaImc(58, 1.55);
+	var imcMarcio = calculaImc(82, 1.75);
+	var imcCleide = calculaImc(53, 1.53);
+
+//esta função faz o cálculo e retorna o resultado de cada uma das variáveis: return calcula ai o imc de... ai vai o peso e altura das pessoas. SEMPRE TEM QUE CHAMAR PARA MOSTRAR SE NÃO, NÃO APARECE NADA. UMA FUNÇÃO SEMPRE RETORNA UM PARÂMETRO
+	
+	mostra(imcEunice);
+	mostra(imcMarcio);
+	mostra(imcCleide);
+	
+	</script>
+
+<h3>Outra forma de trabalhar fazendo soma dos imc's</h3>
+	<script>
+
+	//soma de imc's
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	function calculaImc(peso, altura) {
+
+		return peso / (altura * altura);
+				
+		}
+
+	var imcEunice = calculaImc(58, 1.55);
+	var imcMarcio = calculaImc(82, 1.75);
+	var imcCleide = calculaImc(53, 1.53);
+	var totalImc = imcEunice + imcMarcio + imcCleide;
+
+	mostra("A soma dos imc's é: " + totalImc);
+	
+
+	</script>
+
+
+	<h3>Interagindo com o usuário</h3>
+	
+	<script>
+
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura, peso) {
+
+		return peso / (altura * altura);
+				
+		}
+
+
+		var alturaInformada = 1.71;
+		var pesoInformado = 73;
+
+		var imc = calculaImc(alturaInformada, pesoInformado);
+
+		document.write("O IMC calculado é: " + imc);
+		pulaLinha();
+
+	</script>
+
+
+<h3>Fazendo cálculos</h3>
+
+	<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function a(numero1, numero2) {
+        return numero1 + numero2;
+    }
+
+    function b(numero1, numero2) {
+        return numero1 / numero2;
+    }
+
+    var resultado = a(10,20) + b(30,2);
+
+    mostra(resultado);
+
+</script>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function a(texto) {
+
+        return "(" + texto + ")";
+    }
+
+    function b(texto) {
+
+        return "@" + texto + "@";
+    }
+
+    function c(nome, sobrenome) {
+
+        return b(nome + " " + a(sobrenome));
+
+    }
+
+    var resultado = c("Flávio", "Almeida");
+
+    mostra(resultado);
+
+</script>
+
+<h3>Usando a função Prompt</h3>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc (altura, peso) {
+
+        return peso / (altura * altura);
+    }
+
+	var nome = prompt("Informe o seu nome: ");
+	var alturaInformada = prompt(nome + ", informe sua altura");
+	var pesoInformado = prompt(nome + ", informe seu peso");
+
+	var imc = calculaImc(alturaInformada, pesoInformado);
+
+    mostra(nome + ", o seu IMC é: " + imc);
+
+    if(imc < 18.5) {
+    	mostra("Você está abaixo do recomendado");
+
+    }
+
+    if(imc > 35) {
+    	mostra("Você está acima do recomendado!");
+    }
+
+    if(imc >= 18.5 && imc <= 35) {
+		mostra("Seu imc está dentro das recomendações da OMS!")
+    	};
+    
+
+</script>

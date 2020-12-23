@@ -1,0 +1,57 @@
+<canvas width="600"  height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var cores = ['blue', 'red', 'green'];
+    var indiceCorAtual = 0; //começa pelo blue [0. 1, 2]
+
+    function desenhaCirculo(evento) {
+
+    	var x = evento.pageX - tela.offsetLeft;
+    	var y = evento.pageY - tela.offsetTop; //mostra onde clique - parâmetro para o navegador descontando o espaço entre a tela e o canva para medir o clique dentro do canva e não da tela toda.
+
+    	var raio = 10;
+
+    	if (evento.shiftKey) {
+
+    		raio = raio + 20; 
+
+    	}
+
+    	pincel.fillStyle = cores[indiceCorAtual];
+    	pincel.beginPath();
+    	pincel.arc(x, y, raio, 0, 2 * 3.14);
+    	pincel.fill();
+
+    	console.log(x + ',' + y);
+    }
+
+    //neste exemplo o usuário poderá escolher a cor da bolinha que vai aparecer na tela ao clicar.
+
+     tela.onclick = desenhaCirculo; //aqui não se usa o () porque ele executa imediatamente a função mesmo sem clicar.
+
+    function mudaCor() {
+
+    	indiceCorAtual++;
+
+    	if(indiceCorAtual >= cores.length) {
+    		indiceCorAtual = 0; //volta a primeira cor
+    	}
+
+    	return false; // para não exibir o menu padrão
+
+    }
+
+    
+    tela.oncontextmenu = mudaCor;
+
+
+   
+
+    
+</script>

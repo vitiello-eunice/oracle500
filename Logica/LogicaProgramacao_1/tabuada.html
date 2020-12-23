@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<h3>Tabuada usando o for e o while</h3>
+
+<script>
+
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	
+	var tabuada = 7;
+
+	for(multiplicador = 1; multiplicador <= 10; multiplicador++) {
+
+		mostra(tabuada * multiplicador);
+		
+	}
+
+	var multiplicador = 1;
+	
+	while(multiplicador <=10) {
+		mostra(tabuada * multiplicador);
+		multiplicador = multiplicador + 1; //posso substituir esta expressão por multiplicador++ convofme exemplo acima
+	}
+
+	mostra ("FIM");
+
+
+ </script>
+
+ <p>for( var i = 0; i < 10; i++ ) {
+    alert( "O resultado é " + (2 * i) );
+}
+</p>
+
+<p>
+var i = 0;
+while( i < 10) {
+    alert( "O resultado é " + (2 * i) );
+    i++;    
+}
+
+</p>

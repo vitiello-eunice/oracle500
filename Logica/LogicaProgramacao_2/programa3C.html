@@ -1,0 +1,46 @@
+<canvas width="600" height = "400"></canvas>
+
+<script>
+
+var tela = document.querySelector ('canvas');
+var pincel = tela.getContext('2d');
+
+pincel.fillStyle = 'grey';
+pincel.fillRect(0, 0, 600, 400);
+
+var desenha = false; //para que o círculo não seja desenhado sem que o botão esquerdo do mouse esteja pressionado
+
+function desenhaCirculo(evento) {
+	
+	if(desenha) {
+		var x = evento.pageX - tela.offsetLeft;
+		var y = evento.pageY - tela.offsetTop;
+		pincel.fillStyle = 'blue';
+		pincel.beginPath();
+		pincel.arc(x, y, 10, 0, 2 * 3.14);
+		pincel.fill();
+	}
+
+	console.log(x + ',' + y);
+}
+
+tela.onmousemove = desenhaCirculo;
+
+function habilitaDesenhar() {
+
+	desenha = true;
+}
+
+function desabilitaDesenhar () {
+
+	desenha = false;
+}
+
+tela.onmousedown = habilitaDesenhar;
+
+tela.onmouseup = desabilitaDesenhar;
+
+
+//Existem os eventos, onmousedown e onmouseup. O primeiro é disparado toda vez que o botão esquerdo do mouse é pressionado e o segundo quando ele é solto. Sendo assim, de alguma maneira, nossa função desenhaCirculo só pode desenhar na tela se o botão estiver pressionado, se não estiver, nada acontecerá.
+
+</script>

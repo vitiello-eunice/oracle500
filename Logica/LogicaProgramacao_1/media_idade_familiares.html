@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<h3>Média de idades familiares</h3>
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	//supondo que sejam 3 familiares
+
+	var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+
+	var numero = 1;
+
+	var totalIdades = 0; //inicia com zero antes de acumular e fica de fora do while, se não, a cada passada o programa zera o número anterior informado ao inves de somar
+
+	while(numero <= totalFamiliares) {
+	var idade = parseInt(prompt("informe idade do familiar"));
+	totalIdades = totalIdades + idade;
+	numero++;
+ 	
+ 	}
+
+ 	var mediaDasIdades = totalIdades/totalFamiliares;
+ 	mostra("A média das idades dos familiares é: " + mediaDasIdades);
+	mostra("FIM");
+
+</script>

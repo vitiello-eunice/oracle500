@@ -1,0 +1,136 @@
+<meta charset="UTF-8">
+
+<h3>Em que ano tiveram copas desde 1930</h3>
+
+<script>
+
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	var limite = parseInt(prompt("Entre com a data limite"));
+	var anoCopa = 1930;
+
+	
+	//repetir para que o comando se repita, porém com um data para o navegador não ficar imprimindo ao infinito.
+
+	while(anoCopa <= limite) {
+
+		mostra("Teve copa em: " + anoCopa);
+		anoCopa = anoCopa + 4; //incrementa o ano copa de 4 em 4
+	}
+
+	mostra("FIM");
+
+
+	</script>
+
+<h3>Imprimir todos os números pares de 0 a 100 </h3>
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	var contador = 0;
+	var limite = 100;
+
+	while(contador <= limite) {
+
+		mostra(contador);
+		contador = contador + 2; //incrementa de 2 em 2
+	}
+
+	mostra("FIM");
+
+</script>
+
+<h3> Imprima todos os números entre 30 e 40 (inclusive 30 e 40), porém os números 33 e 37 não devem ser impressos!</h3>
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	var contador = 30;
+	var limite = 40;
+
+	while(contador <= limite) {
+
+		if(contador == 33) {
+			contador = contador + 1;
+		}
+
+		if(contador == 37) {
+			contador = contador +1;
+		}
+
+		else {
+
+		mostra(contador);
+		contador = contador + 1; //incrementa de 1 em 1
+		
+		}
+	}
+
+	mostra("FIM");
+
+</script>
+
+<h3> Imprima em ordem decrescente todos os números entre 20 e 0, incluindo os limites!</h3>
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	var contador = 20;
+	var limite = 0;
+
+	while(contador >= limite) {
+
+		mostra(contador);
+		contador = contador - 1; 
+		
+		}
+	
+
+	mostra("FIM");
+
+</script>

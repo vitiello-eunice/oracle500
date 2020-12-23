@@ -1,0 +1,60 @@
+<meta charset = "UTF-8">
+
+<p>Após as duas funções declaradas, vamos utilizá-las no código para imprimir quantos anos tem cada um dos envolvidos:</p>
+
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br>");
+
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	var ano = 2020;
+
+	mostra("Eu nasci em: " + (ano - 57));
+	mostra("Adriano nasceu em: " + (ano-26));
+	mostra("Paulo nasceu em: " + (ano-32));
+
+</script>
+
+
+<p>Vamos a alguns exercícios baseados no código acima.</p>
+
+<p>1 - Altere sua função pulaLinha para que ela pule duas linhas! Isto é, faça dois <br>s.</p>
+
+<p>2- Há uma tag HTML que também é interessante para separar um resultado do outro, a <hr>. Altere a função pulaLinha() para que ela escreva no navegador um <hr> entre os dois <br>s que você já fez.</p>
+
+<p> - A fonte do nosso programa talvez ainda não seja adequada. Há uma tag HTML que se chama <big>. Faça com que a função mostra coloque a frase entre <big> e </big>.</p>
+
+<p>4 - O que acontece se você esquecer a palavra function na hora de declarar uma de suas funções? E os parênteses na declaração da função pulaLinha? Faça o teste e veja as mensagens de erro no console JavaScript do Chrome.</p>
+
+<meta charset="UTF-8">
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><hr><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write ("<big>" + frase + "</big>");
+		pulaLinha();
+	}
+
+	var ano = 2020;
+
+	mostra("Eu nasci em: " + (ano - 57));
+	mostra("Adriano nasceu em: " + (ano-26));
+	mostra("Paulo nasceu em: " + (ano-32));
+
+</script>

@@ -1,0 +1,248 @@
+<meta charset="UTF-8">
+
+<script>
+	document.write("A média das idades é " + (20 + 10 + 30)/3 + "<br>");
+	document.write("Eunice nasceu em " + (2020 - 57));
+	document.write ("<br>");
+	document.write("Marcio nasceu em " + (2020 - 57));
+	document.write ("<br>");
+	document.write(10+20);
+	document.write("<h1>Seja bem-vindo</h1>");
+
+
+    document.write("Flávio nasceu em " + (2016 - 39) + "<br>");
+    document.write("Joaquim nasceu em " + (2016 - 20) + "<br>");
+    document.write("Barney nasceu em " + (2016 - 40) + "<br><br>");
+
+
+
+    var ano = 2020;
+
+    document.write("Flávio tem " + (ano - 1977) + " anos" + "<br>");
+    document.write("Joaquim tem " + (ano - 1996) + " anos" + "<br>");
+    
+    ano = 2021;
+    document.write("Barney tem " + (ano - 1976) + " anos" + "<br>");
+
+</script>
+
+
+<h3>Escrevendo minhas próprias funcionalidades - Usando Function</h3>
+
+	<script>
+
+	function pulaLinha() {
+
+		document.write("<br><br>");
+		
+	}
+
+	function mostra(conteudo) {
+
+		document.write(conteudo)
+
+	}
+
+		var ano = 2020;
+
+		//isto é um código comentado e não aparece na tela
+    	//document.write("Flávio tem " + (ano - 1977) + " anos");
+    	mostra("Flávio tem " + (ano - 1977) + " anos");
+    	pulaLinha();
+
+    	//document.write("Joaquim tem " + (ano - 1996) + " anos");
+    	mostra("Joaquim tem " + (ano - 1996) + " anos");
+    	pulaLinha();
+    
+    	ano = 2021;
+    	//document.write("Barney tem " + (ano - 1976) + " anos");
+    	mostra("Barney tem " + (ano - 1976) + " anos");
+
+	</script>
+
+	
+
+		<h3>Simplificando ainda mais - Usando Function e incorporando duas funções: pulaLinha + mostra</h3>
+
+		<p>Exemplificando funções com e sem parâmetros.</p>
+
+		<script>
+
+		function pulaLinha() {
+
+			document.write("<br><br>");
+		
+		}
+
+		function mostra(conteudo) {
+
+			document.write(conteudo)
+			pulaLinha();
+
+		}
+
+			var ano = 2020;
+
+		   	mostra("Flávio tem " + (ano - 1977) + " anos");
+    		
+    	   	mostra("Joaquim tem " + (ano - 1996) + " anos");
+    		    
+    		ano = 2021;
+    		
+    		mostra("Barney tem " + (ano - 1976) + " anos");
+  		
+
+		</script>
+
+
+<h3>Gilberto</h3>
+<p>Gilberto aprendeu que funções podem tornar seu programa mais fácil de manter. Veja o programa que ele criou:</p>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    var titulo = "Bem-vindo ao meu programa!";
+
+    document.write("<h1>" + titulo + "</h1>");
+
+    pulaLinha();
+   
+    document.write("Vocês não sabem o que tive que aprender para fazer isso!");
+
+    pulaLinha();
+   
+    document.write("Contudo, assistindo os vídeos e estudando ...");
+
+    pulaLinha();
+   
+    document.write("Eu vou mais longe!");
+
+    pulaLinha();
+    
+ </script>
+
+<h3>Tirando o pula linha de cada linha</h3>
+
+ <script>
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function mostra(mensagem) {
+
+    	document.write(mensagem)
+    	pulaLinha();
+    }
+
+    var titulo = "Bem-vindo ao meu programa!";
+
+    mostra("<h1>" + titulo + "</h1>");
+
+    mostra("Vocês não sabem o que tive que aprender para fazer isso!");
+   
+    mostra("Contudo, assistindo os vídeos e estudando ...");
+   
+    mostra("Eu vou mais longe!");
+
+    
+ </script>
+
+
+ <h3>Alerta diferente!</h3>
+
+  <script>
+    var idade1 = 10;
+    var idade2 = 20;
+    var idade3 = 30;
+    var totalIdades = idade1 + idade2 + idade3;
+    var mediaIdades = totalIdades/3;
+   // alert("***Total de idades é " + totalIdades + "***");
+   // alert("***A média das idades é " +  mediaIdades + "***");
+
+  </script>
+  
+ 
+
+  <script>
+
+  	//codigo melhorado
+
+    function exibeAlerta(mensagem) {
+    	
+        alert("***" + mensagem + "***");
+    }
+
+    var idade1 = 10;
+    var idade2 = 20;
+    var idade3 = 30;
+    var totalIdades = idade1 + idade2 + idade3;
+    var mediaIdades = totalIdades/3;
+
+    //exibeAlerta("Total de idades é " + totalIdades);
+   //exibeAlerta("A média das idades é " +  mediaIdades);
+  
+  </script>
+
+ <h3> Exercício diferença de idade </h3> 
+
+<p>Quantos anos você tem de diferença do seu irmão?</p>
+
+<p>Escreva um programa que exiba a mensagem "Nossa diferença de idade é", concatenando o resultado da subtração da sua idade com a do seu irmão (ou de um amigo). A resposta pode dar negativa, sem dúvida. Não esqueça de usar as funções pulaLinha e mostra e inclusive a tag <meta> para resolver problema de acentuação.</p>
+
+<script>
+
+	function pulaLinha () {
+
+		document.write ("<br>");
+	}
+
+	function mostra (conteudo) {
+
+		document.write (conteudo);
+		pulaLinha ();
+
+	}
+
+	var nasceuEunice = 1963;
+	var nasceuCleide = 1966;
+
+	mostra("Eu nasci em: " + nasceuEunice + " e minha irmã nasceu em: " + nasceuCleide);
+	mostra("Portanto, nossa diferença de idade é de " + (nasceuEunice - nasceuCleide) + " anos");
+	pulaLinha();
+
+
+</script>
+
+<h3>O problema das gerações</h3>
+
+<p>Em média, um casal tem filhos quando atinge a idade de 28 anos. Seguindo essa média, se os portugueses chegaram em 1500 no Brasil, então, a primeira geração de brasileiros surgiu em 1528, a segunda em 1556 e assim por diante. Desde 1500 até o ano atual, quantas gerações se passaram?</p>
+
+<p>Vamos criar um programa para resolver a tarefa!</p>
+
+<p>Imprima esse número da seguinte maneira: calcule quantos anos passaram desde 1500 e divida o resultado pela média de 28 anos.</p>
+
+<script>
+	function pulaLinha() {
+
+		document.write("<br>");
+	}	
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+	var ano1 = 1500;
+	var anoatual = 2020;
+	var mediaIdade = 28
+	var gerações = (anoatual - ano1) / mediaIdade;
+
+	mostra("A quantidade de gerações no Brasil desde 1.500 é: " + gerações);
+	pulaLinha();
+
+</script>

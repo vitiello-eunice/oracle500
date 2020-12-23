@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+<h3>Exercício 1</h3>
+<p> 3 vitórias e um empate onde o resultado tem de ser 10. Neste exemplo o Java concatena texto com número</p>
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+
+	var vitorias = prompt("Entre com o número de vitórias.");
+	var empates = prompt("Entre com o número de empates.");
+
+
+//1 vitória vale 3 pontos e 1 empate vale 1 ponto. Na fórmula abaixo não é necessário colocar parênteses porque a leitura é da esquerda para a direita e  função vai multiplicar primeiro e depois somar. 
+//o prompt sempre retorna como texto os resultados que forem digitados, mesmo que sejam números. Só multiplicação e divisão faz o Java transformar o texto do prompt em número. Para isto existe uma função nativa do Java que é o parseInt() que converte uma string em número.
+
+var pontos = vitorias * 3 + empates;
+
+
+mostra("Os pontos do seu time são: " + pontos);
+
+	</script>
+
+<h3>Exercício 2 - usando o parseInt()</h3>
+<p> 3 vitórias e um empate onde o resultado tem de ser 10. Neste exemplo o parseInt converte as strings em números e realiza o cálculo corretamente.</p>
+
+
+<script>
+
+	function pulaLinha() {
+
+		document.write ("<br><br>");
+		
+	}
+
+	function mostra (frase) {
+
+		document.write (frase);
+		pulaLinha();
+	}
+
+
+	var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+	var empates = parseInt(prompt("Entre com o número de empates."));
+
+
+var pontos = vitorias * 3 + empates;
+
+
+mostra("Os pontos do seu time são: " + pontos);
+
+if(pontos > 28) {
+	mostra("Seu time está melhor do que o ano passado!");
+}
+
+if(pontos < 28) {
+	mostra("Seu time está pior do que o ano passado.");
+}
+
+if(pontos == 28) {
+	mostra("Seu time está igual ao ano passado.");
+}
+
+mostra("FIM")
+</script>
